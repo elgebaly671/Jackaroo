@@ -13,7 +13,9 @@ public class Deck {
 
     //reads the csv file and instantiates the right card based on the code
     public static void loadCardPool(BoardManager boardManager, GameManager gameManager)
-    throws IOException{}
+    throws IOException{
+        System.out.println(CARDS_FILE);
+    }
 
     /*Shuffles the cardsPool, then removes and re
 turns the first four cards from it*/
