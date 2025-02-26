@@ -9,7 +9,7 @@ public class Standard extends Card{
     private int rank;
     private Suit suit;
 
-    Standard(String name, String description, int rank, Suit suit, BoardManager boardManager,
+    public Standard(String name, String description, int rank, Suit suit, BoardManager boardManager,
  GameManager gameManager){
     super(name, description, boardManager, gameManager);
     this.rank = rank;
