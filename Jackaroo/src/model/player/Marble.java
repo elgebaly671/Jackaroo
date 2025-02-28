@@ -1,5 +1,5 @@
 package model.player;
-import model;
+import model.Colour;
 public class Marble {
     private final Colour colour;
 
@@ -7,7 +7,7 @@ public class Marble {
         this.colour = colour;
     }
 
-private getColour()
+private Colour getColour()
 {return this.colour;}
 
 }
