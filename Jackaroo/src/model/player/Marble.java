@@ -7,7 +7,7 @@ public class Marble {
         this.colour = colour;
     }
 
-private Colour getColour()
+public Colour getColour()
 {return this.colour;}
 
 }
