@@ -2,7 +2,7 @@ package exception;
 
 public class SplitOutOfRangeException extends InvalidSelectionException {
     public SplitOutOfRangeException() {
-        super("Split out of range.");
+        super();
     }
 
     public SplitOutOfRangeException(String message) {
