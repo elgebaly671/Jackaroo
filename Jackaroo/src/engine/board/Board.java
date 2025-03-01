@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import engine.board.Cell; 
   
 
-public class Board {
+public class Board implements BoardManager {
     private final GameManager gameManager;
     private final ArrayList<Cell> track;
     private final ArrayList<SafeZone> safeZones;
