@@ -9,7 +9,7 @@ public abstract class Card {
     protected BoardManager boardManager;
     protected GameManager gameManager;
 
-    protected Card(String name, String description, BoardManager boardManager, 
+    public Card(String name, String description, BoardManager boardManager, 
     GameManager gameManager){
         this.name = name;
         this.description = description;

@@ -24,11 +24,12 @@ import model.card.wild.Saver;
 
 public class Deck {
     private final static String CARDS_FILE = "Cards.csv";
-    private static ArrayList<Card> cardspool;
+    private static ArrayList<Card> cardsPool;
 
     // reads the csv file and instantiates the right card based on the code
     public static void loadCardPool(BoardManager boardManager, GameManager gameManager)
             throws IOException {
+        cardsPool = new ArrayList<Card>();
         // preparing the data to be read
         BufferedReader reader = new BufferedReader(new FileReader(CARDS_FILE));
         String line = "";
@@ -64,14 +65,14 @@ public class Deck {
                     for (int f = 0; f < freq; f++) {
                         Standard standard = new Standard(row[2], row[3], Integer.parseInt(row[4]), Suit.valueOf(row[5]),
                                 boardManager, gameManager);
-                        cardspool.add(standard);
+                        cardsPool.add(standard);
                     }
                     break;
                 case "1":
 
                     for (int f = 0; f < freq; f++) {
                         Ace ace = new Ace(row[2], row[3], Suit.valueOf(row[5]), boardManager, gameManager);
-                        cardspool.add(ace);
+                        cardsPool.add(ace);
                     }
 
                     break;
@@ -79,7 +80,7 @@ public class Deck {
 
                     for (int f = 0; f < freq; f++) {
                         King king = new King(row[2], row[3], Suit.valueOf(row[5]), boardManager, gameManager);
-                        cardspool.add(king);
+                        cardsPool.add(king);
                     }
 
                     break;
@@ -87,7 +88,7 @@ public class Deck {
 
                     for (int f = 0; f < freq; f++) {
                         Queen q = new Queen(row[2], row[3], Suit.valueOf(row[5]), boardManager, gameManager);
-                        cardspool.add(q);
+                        cardsPool.add(q);
                     }
 
                     break;
@@ -95,14 +96,14 @@ public class Deck {
 
                     for (int f = 0; f < freq; f++) {
                         Jack jack = new Jack(row[2], row[3], Suit.valueOf(row[5]), boardManager, gameManager);
-                        cardspool.add(jack);
+                        cardsPool.add(jack);
                     }
                     break;
                 case "4":
 
                     for (int f = 0; f < freq; f++) {
                         Four four = new Four(row[2], row[3], Suit.valueOf(row[5]), boardManager, gameManager);
-                        cardspool.add(four);
+                        cardsPool.add(four);
                     }
 
                     break;
@@ -110,7 +111,7 @@ public class Deck {
 
                     for (int f = 0; f < freq; f++) {
                         Five five = new Five(row[2], row[3], Suit.valueOf(row[5]), boardManager, gameManager);
-                        cardspool.add(five);
+                        cardsPool.add(five);
                     }
 
                     break;
@@ -118,7 +119,7 @@ public class Deck {
 
                     for (int f = 0; f < freq; f++) {
                         Seven seven = new Seven(row[2], row[3], Suit.valueOf(row[5]), boardManager, gameManager);
-                        cardspool.add(seven);
+                        cardsPool.add(seven);
                     }
 
                     break;
@@ -126,7 +127,7 @@ public class Deck {
 
                     for (int f = 0; f < freq; f++) {
                         Ten ten = new Ten(row[2], row[3], Suit.valueOf(row[5]), boardManager, gameManager);
-                        cardspool.add(ten);
+                        cardsPool.add(ten);
                     }
 
                     break;
@@ -134,7 +135,7 @@ public class Deck {
 
                     for (int f = 0; f < freq; f++) {
                         Burner burner = new Burner(row[2], row[3], boardManager, gameManager);
-                        cardspool.add(burner);
+                        cardsPool.add(burner);
                     }
 
                     break;
@@ -142,7 +143,7 @@ public class Deck {
 
                     for (int f = 0; f < freq; f++) {
                         Saver saver = new Saver(row[2], row[3], boardManager, gameManager);
-                        cardspool.add(saver);
+                        cardsPool.add(saver);
                     }
 
                 default:
@@ -158,7 +159,7 @@ public class Deck {
      * turns the first four cards from it
      */
     public static ArrayList<Card> drawCards() {
-        return cardspool;
+        return cardsPool;
     }
 
     public static void main(String[] args) throws IOException {
