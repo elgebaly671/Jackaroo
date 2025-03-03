@@ -3,12 +3,12 @@ import model.player.Marble;
 
 public class Cell{
     private Marble marble;
-    private CellType celltype;
+    private CellType cellType;
     private boolean trap;
 
     public Cell(CellType celltype)
     {
-        this.celltype=celltype;
+        this.cellType=celltype;
         marble=null;
         trap= false;}
 
@@ -16,16 +16,16 @@ public class Cell{
     {return this.marble;}
    
     public CellType getCellType()
-    {return this.celltype;}
+    {return this.cellType;}
     
-    public boolean getTrap()
+    public boolean isTrap()
     {return this.trap;}
 
     public void setMarble(Marble marble)
     {this.marble=marble;}
 
     public void setCellType(CellType celltype)
-    {this.celltype=celltype;}
+    {this.cellType=celltype;}
 
     public void setTrap(boolean trap)
     {this.trap=trap;}
@@ -34,7 +34,7 @@ public class Cell{
     {
         return "Cell{" +
                 "marble=" + marble +
-                ", celltype=" + celltype +
+                ", celltype=" + cellType +
                 ", trap=" + trap +
                 '}';
     }

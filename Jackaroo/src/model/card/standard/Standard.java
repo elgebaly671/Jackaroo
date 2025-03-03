@@ -7,7 +7,7 @@ import model.card.Card;
 public class Standard extends Card{
 
     private int rank;
-    private Suit suit;
+    private final Suit suit;
 
     public Standard(String name, String description, int rank, Suit suit, BoardManager boardManager,
  GameManager gameManager){

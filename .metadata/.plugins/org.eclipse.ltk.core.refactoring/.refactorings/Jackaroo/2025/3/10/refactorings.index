@@ -1,0 +1,6 @@
+1740994319898	Rename type 'CellType'
+1740994347504	Rename type 'cellType'
+1740994779960	Rename field 'celltype'
+1740995048016	Rename field 'Safe'
+1740995888713	Rename method 'isTrap'
+1740995938350	Rename method 'getTrap'

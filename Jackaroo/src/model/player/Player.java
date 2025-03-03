@@ -17,6 +17,9 @@ public class Player {
     this.colour=colour;
     hand = new ArrayList<Card>();
     marbles = new ArrayList<Marble>();
+    for(int i = 0; i < 4; i++){
+    	marbles.add(new Marble(this.colour));
+    }
     selectedMarbles = new ArrayList<Marble>();
     selectedCard= null;}
 

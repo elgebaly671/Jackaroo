@@ -18,7 +18,8 @@ public class Board implements BoardManager {
         track=new ArrayList<Cell>();
         safeZones=new ArrayList<SafeZone>();
         splitDistance=3;
-        for(int i=0;i<100;i++)
+        track.add(new Cell(CellType.BASE));
+        for(int i=1;i<100;i++)
         {if (i%25==0)                               //the base cells are seprated by 25 cells, therofore if we start counting from cell Zero and make it a base cell, then every 25th cell will be a base cell.
          {track.add(new Cell(CellType.BASE));}
         else 
@@ -38,21 +39,22 @@ public class Board implements BoardManager {
     {int count=0;
         while(count!=8)
         {int random=(int)(Math.random()*100);
-            if (track.get(random).getCellType()==CellType.NORMAL && !track.get(random).getTrap())  //if the cell is normal and does not have a trap, assgin a trap cell to it.
+            if (track.get(random).getCellType()==CellType.NORMAL && !track.get(random).isTrap())  //if the cell is normal and does not have a trap, assgin a trap cell to it.
             {track.get(random).setTrap(true);
             count++;}
         }
     }
 
-public void  getTrack()
-    {for(int i=0;i<100;i++)
-    {System.out.println(track.get(i));}}    
+public ArrayList<Cell>  getTrack()
+//    {for(int i=0;i<100;i++)
+//    {System.out.println(track.get(i));}}    
+{
+	return track;
+}
 
 
-
-public void getSafeZones()
-    {for(int i=0;i<4;i++)   //print the safe zones of the players  
-    {safeZones.get(i).getCells();}}
+public ArrayList<SafeZone> getSafeZones()
+    {return safeZones;}
 
 
 public int getSplitDistance()

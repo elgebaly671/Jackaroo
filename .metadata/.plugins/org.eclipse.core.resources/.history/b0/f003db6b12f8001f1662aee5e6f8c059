@@ -1,0 +1,4 @@
+package engine.board;
+
+public enum cellType {
+NORMAL, SAFE, BASE, ENTRY}

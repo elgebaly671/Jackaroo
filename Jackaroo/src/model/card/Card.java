@@ -4,8 +4,8 @@ import engine.GameManager;
 import engine.board.BoardManager;
 
 public abstract class Card {
-    private String name;
-    private String description;
+    private final String name;
+    private final String description;
     protected BoardManager boardManager;
     protected GameManager gameManager;
 
